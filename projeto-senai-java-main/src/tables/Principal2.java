@@ -7,6 +7,18 @@ public class Principal2 {
 		cand1.setNomeCandidato("João da Silva");
 		cand1.setPartidoCadidato("PPP");
 		cand1.setFichaLimpaCandidato("sim");
+
+		CandidatoController controller = new CandidatoController();
+		try {
+			controller.salvar(cand1);
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		for (CandidatoController c : controller.listar()) {
+			System.out.println(c.toString());
+		}
 		
 	}
 	
@@ -18,6 +30,18 @@ public class Principal2 {
 		pesq1.setMediaIdadePesquisa(0);
 		pesq1.setTipoPesquisa("4899991111");
 		pesq1.setFormatoPesquisa("direto");
+
+		PesquisaController controller = newPesquisaController();
+		try {
+			controller.salvar(pesq1);
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		for (PesquisaController p : controller.listar()) {
+			System.out.println(p.toString());
+		}
 		
 	}
 	
